@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<h1>My First Heading</h1>
+
+<p>My first paragraph.</p>
+<input type="text" name="name" id="name" value="Vivek">
+
+</body>
+<script>
+    let a = document.getElementById("name");
+    fetch('http://localhost:8080/employees', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify("Hello World"),
+    })
+      .then(response => "vivek")
+      .then(data => console.log('test:', data));
+</script>
+</html>
